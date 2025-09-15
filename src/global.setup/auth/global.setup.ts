@@ -8,9 +8,8 @@ async function globalSetup(config: FullConfig) {
   const browser = await chromium.launch({ headless: false });
   const page = await browser.newPage();
 
-  const continueButton = page.getByText('Continue', { exact: true }); //поменять локатор
-  //поиск континью с css селектором селектор батон и дата action data primary true
-  //
+  const continueButton = page.getByText('Continue', { exact: true });
+
   await page.goto('https://www.discogs.com/login');
   await page.fill('#username', `${Environment.USER_NAME}`);
   await page.fill('#password', `${Environment.USER_PASSWORD}`);

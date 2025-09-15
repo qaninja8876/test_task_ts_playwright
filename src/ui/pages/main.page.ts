@@ -14,6 +14,7 @@ export class MainPage extends BasePage {
     logo: this.page.locator('#custom-prompt-logo'),
     userButton: this.page.locator('button[aria-label^="Logged in as"]')
   };
+
   constructor(page: Page) {
     super(page);
     this.urlMainPage = `${Environment.BASE_UI_URL}`;
